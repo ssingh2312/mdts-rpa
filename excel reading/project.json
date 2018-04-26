@@ -1,0 +1,14 @@
+{
+  "name": "excel reading",
+  "description": "email attachment is an excel",
+  "main": "Main.xaml",
+  "dependencies": {},
+  "excludedData": [
+    "Private:*",
+    "*password*"
+  ],
+  "toolVersion": "17.1.6435.21855",
+  "projectVersion": "1.0.6499.41527",
+  "packOptions": {},
+  "runtimeOptions": {}
+}

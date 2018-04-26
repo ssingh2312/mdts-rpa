@@ -1,0 +1,343 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Main_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Core.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Recording Sequence" sap2010:WorkflowViewState.IdRef="Sequence_13">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:GenericValue" Name="Text" />
+      <Variable x:TypeArguments="x:String" Name="Title" />
+      <Variable x:TypeArguments="x:String" Name="variable1" />
+    </Sequence.Variables>
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input dialog" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Enter notepad text:" Title="Enter notepad text:">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="ui:GenericValue">[Text]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input dialog" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Enter notepad title:" Title="Enter notepad title:">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[Title]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'explorer.exe  Start'" sap2010:WorkflowViewState.IdRef="Click_48" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="10" OffsetY="16" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="9997a1d0996323f2b2fd6f7b1ab2d976" Selector="&lt;wnd app='explorer.exe' cls='Button' title='Start' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'menu item  Notepad'" sap2010:WorkflowViewState.IdRef="Click_49" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="43" OffsetY="23" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6b78e5f98e72c43c5b5a6b95e8994fee" Selector="&lt;wnd app='explorer.exe' cls='DV2ControlHost' title='Start menu' /&gt;&lt;wnd aaname='Frequently used programs' cls='SysListView32' /&gt;&lt;ctrl name='Frequently used programs' role='popup menu' /&gt;&lt;ctrl name='Notepad' role='menu item' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type into 'editable text'" EmptyField="True" sap2010:WorkflowViewState.IdRef="TypeInto_7" SendWindowMessages="False" SimulateType="False" Text="[Text]">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f7cc5598231fb48f0b094d224fd38f52" Selector="&lt;wnd app='notepad.exe' cls='Notepad' title='Untitled - Notepad' /&gt;&lt;wnd cls='Edit' /&gt;&lt;ctrl role='editable text' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:TypeInto.Target>
+    </ui:TypeInto>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'menu item  Format'" sap2010:WorkflowViewState.IdRef="Click_50" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="37" OffsetY="15" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="5f1ac669cc1494a5dd0d30968a64e06d" Selector="&lt;wnd app='notepad.exe' cls='Notepad' title='Untitled - Notepad' /&gt;&lt;ctrl automationid='MenuBar' idx='1' name='Application' role='menu bar' /&gt;&lt;ctrl name='Format' role='menu item' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'menu item  Font...'" sap2010:WorkflowViewState.IdRef="Click_51" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="22" OffsetY="12" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="cb97a14913993a828a11bcf114115c4f" Selector="&lt;wnd app='notepad.exe' cls='#32768' /&gt;&lt;ctrl name='Format' role='popup menu' /&gt;&lt;ctrl automationid='33' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select item 'list  Font:'" sap2010:WorkflowViewState.IdRef="SelectItem_14" Item="Arial">
+      <ui:SelectItem.Items>
+        <scg:List x:TypeArguments="x:String" Capacity="128">
+          <x:String>Algerian</x:String>
+          <x:String>Arial</x:String>
+          <x:String>Baskerville Old Face</x:String>
+          <x:String>Bauhaus 93</x:String>
+          <x:String>Bell MT</x:String>
+          <x:String>Berlin Sans FB</x:String>
+          <x:String>Bernard MT</x:String>
+          <x:String>Bodoni MT Poster</x:String>
+          <x:String>Book Antiqua</x:String>
+          <x:String>Bookman Old Style</x:String>
+          <x:String>Bookshelf Symbol 7</x:String>
+          <x:String>Bradley Hand ITC</x:String>
+          <x:String>Britannic</x:String>
+          <x:String>Broadway</x:String>
+          <x:String>Brush Script MT</x:String>
+          <x:String>Calibri</x:String>
+          <x:String>Californian FB</x:String>
+          <x:String>Cambria</x:String>
+          <x:String>Cambria Math</x:String>
+          <x:String>Candara</x:String>
+          <x:String>Centaur</x:String>
+          <x:String>Century</x:String>
+          <x:String>Century Gothic</x:String>
+          <x:String>Chiller</x:String>
+          <x:String>Colonna MT</x:String>
+          <x:String>Comic Sans MS</x:String>
+          <x:String>Consolas</x:String>
+          <x:String>Constantia</x:String>
+          <x:String>Cooper</x:String>
+          <x:String>Corbel</x:String>
+          <x:String>Courier</x:String>
+          <x:String>Courier New</x:String>
+          <x:String>Fixedsys</x:String>
+          <x:String>Footlight MT</x:String>
+          <x:String>Franklin Gothic</x:String>
+          <x:String>Freestyle Script</x:String>
+          <x:String>French Script MT</x:String>
+          <x:String>Gabriola</x:String>
+          <x:String>Gadugi</x:String>
+          <x:String>Garamond</x:String>
+          <x:String>Georgia</x:String>
+          <x:String>Haettenschweiler</x:String>
+          <x:String>Harlow Solid</x:String>
+          <x:String>Harrington</x:String>
+          <x:String>High Tower Text</x:String>
+          <x:String>Impact</x:String>
+          <x:String>Informal Roman</x:String>
+          <x:String>Jokerman</x:String>
+          <x:String>Juice ITC</x:String>
+          <x:String>Kristen ITC</x:String>
+          <x:String>Kunstler Script</x:String>
+          <x:String>Latin</x:String>
+          <x:String>Lucida Bright</x:String>
+          <x:String>Lucida Calligraphy</x:String>
+          <x:String>Lucida Console</x:String>
+          <x:String>Lucida Fax</x:String>
+          <x:String>Lucida Handwriting</x:String>
+          <x:String>Lucida Sans Unicode</x:String>
+          <x:String>Magneto</x:String>
+          <x:String>Matura MT Script Capitals</x:String>
+          <x:String>Microsoft JhengHei UI</x:String>
+          <x:String>Microsoft Sans Serif</x:String>
+          <x:String>Microsoft YaHei UI</x:String>
+          <x:String>Mistral</x:String>
+          <x:String>Modern</x:String>
+          <x:String>Modern No. 20</x:String>
+          <x:String>Monotype Corsiva</x:String>
+          <x:String>MS Outlook</x:String>
+          <x:String>MS Reference Sans Serif</x:String>
+          <x:String>MS Reference Specialty</x:String>
+          <x:String>MS Sans Serif</x:String>
+          <x:String>MS Serif</x:String>
+          <x:String>MT Extra</x:String>
+          <x:String>Niagara Engraved</x:String>
+          <x:String>Niagara Solid</x:String>
+          <x:String>Nirmala UI</x:String>
+          <x:String>Old English Text MT</x:String>
+          <x:String>Onyx</x:String>
+          <x:String>Palatino Linotype</x:String>
+          <x:String>Papyrus</x:String>
+          <x:String>Parchment</x:String>
+          <x:String>Playbill</x:String>
+          <x:String>Poor Richard</x:String>
+          <x:String>Pristina</x:String>
+          <x:String>Ravie</x:String>
+          <x:String>Roman</x:String>
+          <x:String>Script</x:String>
+          <x:String>Segoe Print</x:String>
+          <x:String>Segoe Script</x:String>
+          <x:String>Segoe UI</x:String>
+          <x:String>Segoe UI Symbol</x:String>
+          <x:String>Showcard Gothic</x:String>
+          <x:String>Small Fonts</x:String>
+          <x:String>Snap ITC</x:String>
+          <x:String>Stencil</x:String>
+          <x:String>Symbol</x:String>
+          <x:String>System</x:String>
+          <x:String>Tahoma</x:String>
+          <x:String>Tempus Sans ITC</x:String>
+          <x:String>Terminal</x:String>
+          <x:String>Times New Roman</x:String>
+          <x:String>Trebuchet MS</x:String>
+          <x:String>Verdana</x:String>
+          <x:String>Viner Hand ITC</x:String>
+          <x:String>Vivaldi</x:String>
+          <x:String>Vladimir Script</x:String>
+          <x:String>Webdings</x:String>
+          <x:String>Wingdings</x:String>
+          <x:String>Wingdings 2</x:String>
+          <x:String>Wingdings 3</x:String>
+        </scg:List>
+      </ui:SelectItem.Items>
+      <ui:SelectItem.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="8754d303be0467acf36a70cc79ba0f22" Selector="&lt;wnd app='notepad.exe' cls='#32770' title='Font' /&gt;&lt;wnd ctrlid='1136' /&gt;&lt;wnd ctrlid='1000' /&gt;&lt;ctrl name='Font:' role='list' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:SelectItem.Target>
+    </ui:SelectItem>
+    <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select item 'list  Font style:'" sap2010:WorkflowViewState.IdRef="SelectItem_15" Item="Regular">
+      <ui:SelectItem.Items>
+        <scg:List x:TypeArguments="x:String" Capacity="4">
+          <x:String>Regular</x:String>
+          <x:String>Oblique</x:String>
+          <x:String>Bold</x:String>
+          <x:String>Bold Oblique</x:String>
+        </scg:List>
+      </ui:SelectItem.Items>
+      <ui:SelectItem.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b1b180bb2cd2901c7e5d7253345880c0" Selector="&lt;wnd app='notepad.exe' cls='#32770' title='Font' /&gt;&lt;wnd ctrlid='1137' /&gt;&lt;wnd ctrlid='1000' /&gt;&lt;ctrl name='Font style:' role='list' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:SelectItem.Target>
+    </ui:SelectItem>
+    <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select item 'list  Size:'" sap2010:WorkflowViewState.IdRef="SelectItem_16" Item="10">
+      <ui:SelectItem.Items>
+        <scg:List x:TypeArguments="x:String" Capacity="16">
+          <x:String>8</x:String>
+          <x:String>9</x:String>
+          <x:String>10</x:String>
+          <x:String>11</x:String>
+          <x:String>12</x:String>
+          <x:String>14</x:String>
+          <x:String>16</x:String>
+          <x:String>18</x:String>
+          <x:String>20</x:String>
+          <x:String>22</x:String>
+          <x:String>24</x:String>
+          <x:String>26</x:String>
+          <x:String>28</x:String>
+          <x:String>36</x:String>
+          <x:String>48</x:String>
+          <x:String>72</x:String>
+        </scg:List>
+      </ui:SelectItem.Items>
+      <ui:SelectItem.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="39c4769608c6fbcc913faa8f432b7867" Selector="&lt;wnd app='notepad.exe' cls='#32770' title='Font' /&gt;&lt;wnd ctrlid='1138' /&gt;&lt;wnd ctrlid='1000' /&gt;&lt;ctrl name='Size:' role='list' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:SelectItem.Target>
+    </ui:SelectItem>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap2010:WorkflowViewState.IdRef="Click_52" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="27" OffsetY="23" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="773bc1c4cbc5bb3cf21346ffebacb980" Selector="&lt;wnd app='notepad.exe' cls='#32770' title='Font' /&gt;&lt;wnd ctrlid='1' title='OK' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'menu item  File'" sap2010:WorkflowViewState.IdRef="Click_53" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="14" OffsetY="8" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="15dd483733b2ffc14093db2c7e432985" Selector="&lt;wnd app='notepad.exe' cls='Notepad' title='Untitled - Notepad' /&gt;&lt;ctrl automationid='MenuBar' idx='1' name='Application' role='menu bar' /&gt;&lt;ctrl name='File' role='menu item' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'menu item  Save As...'" sap2010:WorkflowViewState.IdRef="Click_54" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="66" OffsetY="15" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="985199cbc2ee13cfa014ede0e82f421f" Selector="&lt;wnd app='notepad.exe' cls='#32768' /&gt;&lt;ctrl name='File' role='popup menu' /&gt;&lt;ctrl automationid='4' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type into 'Edit'" EmptyField="True" sap2010:WorkflowViewState.IdRef="TypeInto_8" SendWindowMessages="False" SimulateType="False" Text="[Title]">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4898ea9245ef5fda6a942d8981d17907" Selector="&lt;wnd app='notepad.exe' cls='#32770' title='Save As' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:TypeInto.Target>
+    </ui:TypeInto>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap2010:WorkflowViewState.IdRef="Click_55" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="40" OffsetY="14" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="bb1ba506f062f2424ce4ffb79d066145" Selector="&lt;wnd app='notepad.exe' cls='#32770' title='Save As' /&gt;&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  Close'" sap2010:WorkflowViewState.IdRef="Click_56" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="14" OffsetY="6" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="02a307dd87e44d665e6466c9b2db3ca4" Selector="&lt;wnd app='notepad.exe' cls='Notepad' title='* - Notepad' /&gt;&lt;ctrl name='Close' role='push button' idx='1' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <sads:DebugSymbol.Symbol>dztDOlxVc2Vyc1wzMzU1MDFcRG9jdW1lbnRzXFVpUGF0aFxOb3RlcGFkIHByYWN0aXNlXE1haW4ueGFtbDw6A7oCDgIBAUAFRBYCATtFBUkWAgE2SgVREAIBMlIFWRACAS5aBV4TAgErXwVmEAIBJ2cFbhACASNvBeUBFQIBIOYBBfIBFQIBHfMBBYsCFQIBGowCBZMCEAIBFpQCBZsCEAIBEpwCBaMCEAIBDqQCBagCEwIBCqkCBbACEAIBBrECBbgCEAIBAkCMAUChAQIBP0I4Qj4CAT1AqAFAvQECATxFjAFFogECATpHMUc4AgE4RakBRb8BAgE3T5gBT9UBAgE1TDFMNQIBNEwkTCgCATNXmAFXkwMCATFUMVQ1AgEwVCRUKAIBL1yYAVydAgIBLVqeAlqmAgIBLGSYAWTfAgIBKmExYTUCASlhJGEoAgEobJgBbJQCAgEmaTFpNQIBJWkkaSgCASRvuQFvwAECASHjAZgB4wGwAgIBIuYBvwHmAcgBAgEe8AGYAfABtgICAR/zAbkB8wG9AQIBG4kCmAGJArACAgEckQKYAZEC9gECARmOAjGOAjUCARiOAiSOAigCAReZApgBmQLdAgIBFZYCMZYCNAIBFJYCJJYCKAIBE6ECmAGhApECAgERngIxngI1AgEQngIkngIoAgEPpgKYAaYC2AICAQ2kApUCpAKeAgIBC64CmAGuAoQCAgEJqwIxqwI1AgEIqwIkqwIoAgEHtgKYAbYCkQICAQWzAjGzAjQCAQSzAiSzAigCAQM=</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="InputDialog_2" sap:VirtualizedContainerService.HintSize="314,92" />
+      <sap2010:ViewStateData Id="InputDialog_3" sap:VirtualizedContainerService.HintSize="314,92" />
+      <sap2010:ViewStateData Id="Click_48" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_49" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="TypeInto_7" sap:VirtualizedContainerService.HintSize="314,134" />
+      <sap2010:ViewStateData Id="Click_50" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_51" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="SelectItem_14" sap:VirtualizedContainerService.HintSize="314,134" />
+      <sap2010:ViewStateData Id="SelectItem_15" sap:VirtualizedContainerService.HintSize="314,134" />
+      <sap2010:ViewStateData Id="SelectItem_16" sap:VirtualizedContainerService.HintSize="314,134" />
+      <sap2010:ViewStateData Id="Click_52" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_53" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_54" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="TypeInto_8" sap:VirtualizedContainerService.HintSize="314,134" />
+      <sap2010:ViewStateData Id="Click_55" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Click_56" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Sequence_13" sap:VirtualizedContainerService.HintSize="336,2532">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="376,2612" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

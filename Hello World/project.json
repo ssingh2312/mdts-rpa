@@ -1,0 +1,18 @@
+{
+  "name": "Hello World",
+  "description": "Blank Project",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.Core.Activities": "17.1.6435.21841",
+    "UiPath.Excel.Activities": "2.0.6382.14545",
+    "UiPath.Mail.Activities": "1.1.6382.14550"
+  },
+  "excludedData": [
+    "Private:*",
+    "*password*"
+  ],
+  "toolVersion": "17.1.6435.21855",
+  "projectVersion": "1.0.6479.2756",
+  "packOptions": {},
+  "runtimeOptions": {}
+}
